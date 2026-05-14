@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elas Seguras | E-commerce Feminino</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="loading-screen" id="loadingScreen">
+    <div class="loader-circle"></div>
+    <p>Carregando sua experiência premium...</p>
+  </div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="#home" class="brand">
+        <img src="images/logonic2-removebg-preview.png" alt="Safe Her - segurança feminina" class="brand-logo" />
+      </a>
+
+      <nav class="main-nav" id="mainNav">
+        <a href="#home">Início</a>
+        <a href="#produtos">Produtos</a>
+        <a href="#kits">Kits</a>
+        <a href="#sobre">Sobre Nós</a>
+        <a href="#blog">Blog</a>
+        <a href="#contato">Contato</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="search-wrap">
+          <input type="search" id="searchInput" placeholder="Buscar produtos..." aria-label="Buscar produtos" />
+          <button id="searchBtn" aria-label="Buscar"><img src="icons/search.svg" alt="Buscar" /></button>
+        </div>
+
+        <button class="icon-btn" aria-label="Favoritos" id="favoritesBtn">
+          <img src="icons/heart.svg" alt="Favoritos" />
+        </button>
+        <button class="icon-btn" aria-label="Perfil">
+          <img src="icons/user.svg" alt="Perfil" />
+        </button>
+        <button class="icon-btn cart-btn" aria-label="Carrinho" id="cartBtn">
+          <img src="icons/cart.svg" alt="Carrinho" />
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <button class="hamburger" id="menuToggle" aria-label="Abrir menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <span class="eyebrow">Segurança com estilo</span>
+        <h1>Proteja-se com charme, leveza e poder.</h1>
+        <p>Produtos de defesa pessoal feitos para mulheres que se protegem e se empoderam.</p>
+        <div class="hero-actions">
+          <a href="#produtos" class="btn btn-primary">Ver Produtos</a>
+        </div>
+      </div>
+      <div class="hero-preview">
+        <div class="hero-card">
+          <div class="hero-label">Discreto e moderno</div>
+          <div class="hero-label">Fácil de carregar</div>
+          <div class="hero-label">Produtos de qualidade</div>
+          <div class="hero-label">Envio rápido e seguro</div>
+        </div>
+        <div class="hero-image hero-image--blank">
+          <div class="hero-image-placeholder"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits-strip">
+      <div class="benefit-item">
+        <img src="icons/lock.svg" alt="Compra 100% segura" />
+        <div>
+          <strong>Compra 100% segura</strong>
+          <span>Pagamento protegido e confiável</span>
+        </div>
+      </div>
+      <div class="benefit-item">
+        <img src="icons/truck.svg" alt="Frete grátis" />
+        <div>
+          <strong>Frete grátis</strong>
+          <span>acima de R$199</span>
+        </div>
+      </div>
+      <div class="benefit-item">
+        <img src="icons/credit-card.svg" alt="Parcelamento" />
+        <div>
+          <strong>Parcelamento</strong>
+          <span>em até 12x sem juros</span>
+        </div>
+      </div>
+      <div class="benefit-item">
+        <img src="icons/headset.svg" alt="Suporte especializado" />
+        <div>
+          <strong>Suporte especializado</strong>
+          <span>Atendimento pronto para ajudar</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="products-section" id="produtos">
+      <div class="section-header">
+        <div>
+          <p class="section-label">Nossos Produtos</p>
+          <h2>Proteção que combina com você</h2>
+        </div>
+        <div class="filter-group">
+          <select id="categoryFilter" aria-label="Filtrar por categoria">
+            <option value="all">Todos</option>
+            <option value="kits">Kits de Alarme</option>
+            <option value="defesa">Defesa pessoal</option>
+            <option value="sprays">Sprays</option>
+            <option value="acessorios">Acessórios</option>
+            <option value="promo">Kits promocionais</option>
+          </select>
+          <button class="btn btn-secondary" id="clearFilter">Limpar</button>
+        </div>
+      </div>
+
+      <div class="product-grid" id="productGrid"></div>
+    </section>
+
+    <section class="promo-banner" id="kits">
+      <div class="promo-copy">
+        <span>Mais vendido</span>
+        <h2>Kit Completo de Proteção</h2>
+        <p>Tudo que você precisa para se sentir segura, onde estiver.</p>
+        <a href="#produtos" class="btn btn-primary">Quero o meu</a>
+      </div>
+      <div class="promo-visual">
+        <img src="images/coco.png" alt="Kit completo de proteção feminina" onerror="this.src='images/coco.png'" />
+      </div>
+    </section>
+
+    <section class="features-section" id="sobre">
+      <div class="feature-card">
+        <span class="feature-icon">•</span>
+        <h3>Discrição total</h3>
+        <p>Produtos compactos e modernos que parecem acessórios comuns.</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">•</span>
+        <h3>Fácil de usar</h3>
+        <p>Simplos, práticos e eficazes em situações de emergência.</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">•</span>
+        <h3>Empoderamento</h3>
+        <p>Mais do que produtos, entregamos confiança e liberdade.</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">•</span>
+        <h3>Para todas</h3>
+        <p>Opções de cores e kits para combinar com o seu estilo.</p>
+      </div>
+    </section>
+
+    <section class="categories-section" id="blog">
+      <p class="section-label">Categorias</p>
+      <h2>Descubra por categoria</h2>
+      <div class="category-grid">
+        <article class="category-card">
+          <div class="category-icon">A</div>
+          <h4>Kits de Alarme</h4>
+        </article>
+        <article class="category-card">
+          <div class="category-icon">D</div>
+          <h4>Defesa pessoal</h4>
+        </article>
+        <article class="category-card">
+          <div class="category-icon">S</div>
+          <h4>Sprays</h4>
+        </article>
+        <article class="category-card">
+          <div class="category-icon">✦</div>
+          <h4>Acessórios</h4>
+        </article>
+        <article class="category-card">
+          <div class="category-icon">P</div>
+          <h4>Kits promocionais</h4>
+        </article>
+      </div>
+    </section>
+
+    <section class="newsletter-section" id="contato">
+      <div>
+        <p class="section-label">Receba nossas novidades!</p>
+        <h2>Cadastre-se e ganhe 10% OFF na sua primeira compra.</h2>
+      </div>
+      <form id="newsletterForm" class="newsletter-form">
+        <input type="email" id="newsletterEmail" placeholder="Seu melhor e-mail" required />
+        <button type="submit" class="btn btn-primary">Cadastrar</button>
+      </form>
+      <p class="newsletter-feedback" id="newsletterFeedback"></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <h3>Elas Seguras</h3>
+        <p>Segurança, empoderamento e liberdade para mulheres em qualquer lugar.</p>
+      </div>
+      <div>
+        <h4>Institucional</h4>
+        <a href="#sobre">Sobre Nós</a>
+        <a href="#">Política de Privacidade</a>
+        <a href="#">Trocas e Devoluções</a>
+        <a href="#">Perguntas Frequentes</a>
+      </div>
+      <div>
+        <h4>Atendimento</h4>
+        <a href="#">WhatsApp</a>
+        <a href="#">E-mail</a>
+        <a href="#">Formas de Entrega</a>
+        <a href="#">Formas de Pagamento</a>
+      </div>
+      <div>
+        <h4>Redes Sociais</h4>
+        <div class="social-links">
+          <a href="#">Instagram</a>
+          <a href="#">Facebook</a>
+          <a href="#">TikTok</a>
+          <a href="#">YouTube</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Elas Seguras. Todos os direitos reservados.</p>
+      <div class="payment-icons">
+        <span>Visa</span>
+        <span>Mastercard</span>
+        <span>Elo</span>
+        <span>Pix</span>
+      </div>
+    </div>
+  </footer>
+
+  <aside class="cart-sidebar" id="cartSidebar" aria-hidden="true">
+    <div class="cart-header">
+      <h2>Seu Carrinho</h2>
+      <button class="close-cart" id="closeCartBtn" aria-label="Fechar carrinho">×</button>
+    </div>
+    <div class="cart-body" id="cartItemsContainer"></div>
+    <div class="cart-summary">
+      <div>
+        <span>Total</span>
+        <strong id="cartTotal">R$0,00</strong>
+      </div>
+      <button class="btn btn-primary btn-full" id="checkoutBtn">Finalizar Compra</button>
+    </div>
+  </aside>
+
+  <aside class="favorites-sidebar" id="favoritesSidebar" aria-hidden="true">
+    <div class="cart-header">
+      <h2>Favoritos</h2>
+      <button class="close-cart" id="closeFavoritesBtn" aria-label="Fechar favoritos">×</button>
+    </div>
+    <div class="cart-body" id="favoritesItemsContainer"></div>
+  </aside>
+
+  <div class="toast" id="toast"></div>
+
+  <div class="checkout-overlay" id="checkoutOverlay"></div>
+  <div class="checkout-modal" id="checkoutModal">
+    <div class="checkout-container">
+      <!-- Progress Bar -->
+      <div class="checkout-progress">
+        <div class="progress-step active" data-step="1">
+          <span class="progress-number">1</span>
+          <span class="progress-label">Dados</span>
+        </div>
+        <div class="progress-line"></div>
+        <div class="progress-step" data-step="2">
+          <span class="progress-number">2</span>
+          <span class="progress-label">Entrega</span>
+        </div>
+        <div class="progress-line"></div>
+        <div class="progress-step" data-step="3">
+          <span class="progress-number">3</span>
+          <span class="progress-label">Pagamento</span>
+        </div>
+        <div class="progress-line"></div>
+        <div class="progress-step" data-step="4">
+          <span class="progress-number">4</span>
+          <span class="progress-label">Confirmação</span>
+        </div>
+      </div>
+
+      <button class="checkout-close" id="closeCheckout" aria-label="Fechar checkout">×</button>
+
+      <!-- Seção de Dados Pessoais -->
+      <section class="checkout-section active" data-section="1">
+        <h2>Dados Pessoais</h2>
+        <form id="personalDataForm" class="checkout-form">
+          <div class="form-group">
+            <label for="fullName">Nome Completo *</label>
+            <input type="text" id="fullName" name="fullName" required placeholder="Seu nome completo" />
+            <span class="error-msg"></span>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">E-mail *</label>
+              <input type="email" id="email" name="email" required placeholder="seu@email.com" />
+              <span class="error-msg"></span>
+            </div>
+            <div class="form-group">
+              <label for="phone">Celular *</label>
+              <input type="tel" id="phone" name="phone" required placeholder="(11) 99999-9999" />
+              <span class="error-msg"></span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="cpf">CPF *</label>
+              <input type="text" id="cpf" name="cpf" required placeholder="000.000.000-00" />
+              <span class="error-msg"></span>
+            </div>
+          </div>
+
+          <button type="button" class="btn btn-next" data-next="2">Próximo: Entrega</button>
+        </form>
+      </section>
+
+      <!-- Seção de Entrega -->
+      <section class="checkout-section" data-section="2">
+        <h2>Endereço e Entrega</h2>
+        <form id="shippingForm" class="checkout-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="cep">CEP *</label>
+              <input type="text" id="cep" name="cep" required placeholder="12345-678" />
+              <span class="error-msg"></span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="street">Rua *</label>
+              <input type="text" id="street" name="street" required placeholder="Rua Principal" />
+              <span class="error-msg"></span>
+            </div>
+            <div class="form-group" style="max-width: 120px;">
+              <label for="number">Número *</label>
+              <input type="text" id="number" name="number" required placeholder="123" />
+              <span class="error-msg"></span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="complement">Complemento</label>
+              <input type="text" id="complement" name="complement" placeholder="Apto, sala..." />
+              <span class="error-msg"></span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="neighborhood">Bairro *</label>
+              <input type="text" id="neighborhood" name="neighborhood" required placeholder="Centro" />
+              <span class="error-msg"></span>
+            </div>
+            <div class="form-group">
+              <label for="city">Cidade *</label>
+              <input type="text" id="city" name="city" required placeholder="São Paulo" />
+              <span class="error-msg"></span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group" style="max-width: 120px;">
+              <label for="state">Estado *</label>
+              <input type="text" id="state" name="state" required placeholder="SP" />
+              <span class="error-msg"></span>
+            </div>
+          </div>
+
+          <!-- Shipping Options -->
+          <div class="shipping-options">
+            <h3>Forma de Entrega</h3>
+            <label class="shipping-option active">
+              <input type="radio" name="shippingMethod" value="pac" checked />
+              <span class="shipping-option-content">
+                <strong>PAC (Econômico)</strong>
+                <small>Entrega em 10-15 dias</small>
+                <strong class="shipping-price">+ R$ 15,90</strong>
+              </span>
+            </label>
+            <label class="shipping-option">
+              <input type="radio" name="shippingMethod" value="sedex" />
+              <span class="shipping-option-content">
+                <strong>Sedex (Rápido)</strong>
+                <small>Entrega em 3-5 dias</small>
+                <strong class="shipping-price">+ R$ 35,90</strong>
+              </span>
+            </label>
+            <label class="shipping-option">
+              <input type="radio" name="shippingMethod" value="express" />
+              <span class="shipping-option-content">
+                <strong>Entrega Expressa</strong>
+                <small>Entrega em 1-2 dias</small>
+                <strong class="shipping-price">+ R$ 65,90</strong>
+              </span>
+            </label>
+          </div>
+
+          <div class="form-navigation">
+            <button type="button" class="btn btn-secondary btn-back" data-back="1">Voltar</button>
+            <button type="button" class="btn btn-next" data-next="3">Próximo: Pagamento</button>
+          </div>
+        </form>
+      </section>
+
+      <!-- Seção de Pagamento -->
+      <section class="checkout-section" data-section="3">
+        <h2>Forma de Pagamento</h2>
+        <form id="paymentForm" class="checkout-form">
+          <div class="payment-methods">
+            <h3>Selecione o método de pagamento</h3>
+            <label class="payment-option active">
+              <input type="radio" name="paymentMethod" value="pix" checked />
+              <span class="payment-method-label">
+                <strong>PIX</strong>
+                <small>Transferência instantânea</small>
+              </span>
+            </label>
+            <label class="payment-option">
+              <input type="radio" name="paymentMethod" value="credit" />
+              <span class="payment-method-label">
+                <strong>Cartão de Crédito</strong>
+                <small>Parcelado em até 12x</small>
+              </span>
+            </label>
+            <label class="payment-option">
+              <input type="radio" name="paymentMethod" value="debit" />
+              <span class="payment-method-label">
+                <strong>Cartão de Débito</strong>
+                <small>Débito imediato</small>
+              </span>
+            </label>
+            <label class="payment-option">
+              <input type="radio" name="paymentMethod" value="boleto" />
+              <span class="payment-method-label">
+                <strong>Boleto</strong>
+                <small>Vencimento em 3 dias</small>
+              </span>
+            </label>
+          </div>
+
+          <!-- Card Fields (aparecem apenas para crédito/débito) -->
+          <div id="cardFields" class="card-fields" style="display: none;">
+            <div class="form-group">
+              <label for="cardNumber">Número do Cartão *</label>
+              <input type="text" id="cardNumber" name="cardNumber" placeholder="0000 0000 0000 0000" />
+              <span class="error-msg"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="cardName">Nome no Cartão *</label>
+              <input type="text" id="cardName" name="cardName" placeholder="NOME SOBRENOME" />
+              <span class="error-msg"></span>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="cardExpiry">Validade *</label>
+                <input type="text" id="cardExpiry" name="cardExpiry" placeholder="MM/AA" />
+                <span class="error-msg"></span>
+              </div>
+              <div class="form-group">
+                <label for="cardCvv">CVV *</label>
+                <input type="text" id="cardCvv" name="cardCvv" placeholder="000" />
+                <span class="error-msg"></span>
+              </div>
+            </div>
+
+            <!-- Installments -->
+            <div id="installmentsSection" class="form-group">
+              <label for="installments">Parcelamento</label>
+              <select id="installments" name="installments">
+                <option value="1">1x sem juros</option>
+                <option value="2">2x de R$ 0,00</option>
+                <option value="3">3x de R$ 0,00</option>
+                <option value="4">4x de R$ 0,00</option>
+                <option value="6">6x de R$ 0,00</option>
+                <option value="12">12x de R$ 0,00</option>
+              </select>
+              <span class="error-msg"></span>
+            </div>
+          </div>
+
+          <div class="form-navigation">
+            <button type="button" class="btn btn-secondary btn-back" data-back="2">Voltar</button>
+            <button type="button" class="btn btn-next" data-next="4">Revisar Pedido</button>
+          </div>
+        </form>
+      </section>
+
+      <!-- Seção de Confirmação -->
+      <section class="checkout-section" data-section="4">
+        <h2>Resumo do Pedido</h2>
+        <div class="order-summary">
+          <div class="order-items" id="orderItems"></div>
+
+          <div class="order-totals">
+            <div class="total-row">
+              <span>Subtotal</span>
+              <span id="summarySubtotal">R$ 0,00</span>
+            </div>
+            <div class="total-row">
+              <span>Frete</span>
+              <span id="summaryShipping">R$ 15,90</span>
+            </div>
+            <div class="total-row total-final">
+              <strong>Total</strong>
+              <strong id="summaryTotal">R$ 0,00</strong>
+            </div>
+          </div>
+
+          <div class="order-details">
+            <div class="detail-section">
+              <h4>Endereço de Entrega</h4>
+              <p id="deliveryAddress"></p>
+            </div>
+            <div class="detail-section">
+              <h4>Forma de Entrega</h4>
+              <p id="shippingMethod"></p>
+            </div>
+            <div class="detail-section">
+              <h4>Forma de Pagamento</h4>
+              <p id="paymentMethodDisplay"></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-navigation">
+          <button type="button" class="btn btn-secondary btn-back" data-back="3">Voltar</button>
+          <button type="button" class="btn btn-confirm" id="confirmOrderBtn">Confirmar Pedido</button>
+        </div>
+      </section>
+
+      <!-- Seção de Sucesso -->
+      <section class="checkout-section" data-section="5" id="successSection">
+        <div class="success-content">
+          <div class="success-icon">✓</div>
+          <h2>Pedido Realizado com Sucesso!</h2>
+          <p>Obrigada por sua compra! Acompanhe o status do seu pedido.</p>
+          
+          <div class="order-confirmation">
+            <div class="confirmation-item">
+              <span class="label">Número do Pedido</span>
+              <span class="value" id="orderNumber">#000000</span>
+            </div>
+            <div class="confirmation-item">
+              <span class="label">Data do Pedido</span>
+              <span class="value" id="orderDate">00/00/0000</span>
+            </div>
+            <div class="confirmation-item">
+              <span class="label">Prazo de Entrega</span>
+              <span class="value" id="deliveryDate">00/00/0000</span>
+            </div>
+          </div>
+
+          <p class="confirmation-message">Um e-mail de confirmação foi enviado para seu endereço de e-mail.</p>
+          
+          <button type="button" class="btn btn-primary" id="closeSuccess">Continuar Comprando</button>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
